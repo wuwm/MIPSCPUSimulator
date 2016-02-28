@@ -1,0 +1,24 @@
+//  main.c
+//  MipsSimulator
+//
+//  Created by 吴未名 on 15/3/28.
+//  Copyright (c) 2015年 wuwm. All rights reserved.
+
+This is a MipsSimulator.Input:iimage.bin diimage.bin  Output:two .rpt file.
+
+Makefile content:
+----------------------------------------------------------------
+TARGET=single_cycle
+$(TARGET):main.o
+	gcc main.o -o $(TARGET)
+main.o:main.c
+	gcc -c main.c
+clean:
+	rm -f $(TARGET) *.o *.bin *.rpt *.exe *.out
+----------------------------------------------------------------
+Before running:
+make
+After running:
+make clean
+exe file name:
+single_cycle
